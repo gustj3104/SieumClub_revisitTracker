@@ -1,8 +1,47 @@
+.container {
+    max-width: 600px; /* 컨테이너의 최대 너비 지정 */
+    width: 100%; /* 화면 크기에 맞춰 조정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .text {
     margin-bottom: 10px;
-    font-weight: bold;
+}
+.textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .btn {
+    width: 100%;
+    padding: 10px;
     margin-top: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.cancel {
+    background-color: #dfdfdf;
+    color: black;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn.cancel:hover {
+    background-color: #aaa;
 }

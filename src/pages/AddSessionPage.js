@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { addSession } from '../utils/db';
-import '../styles.css';
+// import '../styles.css';
 import '../addSessionStyles.css';
 
 const AddSessionPage = () => {
@@ -34,6 +34,7 @@ const AddSessionPage = () => {
                 <label>
                     <div className="text"> 회차 이름: </div>
                     <input
+                        className="textarea"
                         type="text"
                         value={sessionName}
                         onChange={(e) => setSessionName(e.target.value)}
@@ -44,6 +45,7 @@ const AddSessionPage = () => {
                 <label>
                     <div className="text">참가자 명단 (쉼표로 구분): </div>
                     <textarea
+                        className="textarea"
                         value={participants}
                         onChange={(e) => setParticipants(e.target.value)}
                         placeholder="예: 윤현지, 윤현서"
@@ -53,7 +55,7 @@ const AddSessionPage = () => {
                     추가
                 </button>
             </form>
-            <button className="btn" onClick={() => navigate('/')}>
+            <button className="btn cancel" onClick={() => navigate('/')}>
                 취소
             </button>
         </div>

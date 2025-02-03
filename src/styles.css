@@ -157,34 +157,29 @@ a {
     color: inherit;
 }
 
-/* 현재 페이지 링크 강조 스타일 (선택 사항) */
-.nav-active {
-    font-weight: bold;
-    color: #007bff; /* 원하는 색상으로 변경 가능 */
-}
-
 .nav-list {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 10px;
-}
-
-.nav-list li {
-    flex: 1; /* 각 메뉴가 동일한 너비를 가짐 */
-}
-
-.nav-link {
-    display: block;
-    padding: 15px 20px; /* 패딩을 줘서 클릭 영역 확장 */
     text-align: center;
+}
+
+.nav-item {
+    flex: 1; /* 모든 항목 동일한 너비 */
     text-decoration: none;
-    color: #333;
+}
+
+.nav-item li {
+    width: 100%;
+    padding: 15px 20px; /* 클릭 가능 영역을 크게 */
+    text-align: center;
     background-color: #f8f8f8;
+    color: #333;
     border-radius: 8px;
     transition: background 0.2s ease-in-out;
 }
 
-.nav-link:hover {
+.nav-item li:hover {
     background-color: #e0e0e0;
 }
