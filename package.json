@@ -22,7 +22,7 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
     },
-    "homepage": "https://gustj3104.github.io/SieumClub_revisitTracker/",
+    "homepage": "https://gustj3104.github.io/SieumClub_revisitTracker",
     "eslintConfig": {
         "extends": [
             "react-app",
