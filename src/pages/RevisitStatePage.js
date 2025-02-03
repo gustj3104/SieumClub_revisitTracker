@@ -6,7 +6,14 @@ import '../RevisitStyles.css';
 
 const RevisitStatsPage = () => {
     const [sessions, setSessions] = useState([]);
-    const [revisitStats, setRevisitStats] = useState({ twoPlus: 0, threePlus: 0, fourPlus: 0, total: 0 });
+    const [revisitStats, setRevisitStats] = useState({
+        twoPlus: 0,
+        threePlus: 0,
+        fourPlus: 0,
+        fiveplus: 0,
+        sixplus: 0,
+        total: 0,
+    });
 
     useEffect(() => {
         const fetchSessions = async () => {
@@ -32,17 +39,21 @@ const RevisitStatsPage = () => {
         const twoPlus = Object.values(revisitCount).filter((count) => count >= 2).length;
         const threePlus = Object.values(revisitCount).filter((count) => count >= 3).length;
         const fourPlus = Object.values(revisitCount).filter((count) => count >= 4).length;
+        const fiveplus = Object.values(revisitCount).filter((count) => count >= 5).length;
+        const sixplus = Object.values(revisitCount).filter((count) => count >= 6).length;
 
         setRevisitStats({
             twoPlus,
             threePlus,
             fourPlus,
+            fiveplus,
+            sixplus,
             total,
         });
     };
 
     const data = {
-        labels: ['2회 이상 방문자', '3회 이상 방문자', '4회 이상 방문자'],
+        labels: ['2회 이상 방문자', '3회 이상 방문자', '4회 이상 방문자', '5회 이상 방문자', '6회 이상 방문자'],
         datasets: [
             {
                 label: '재방문자 수',
@@ -74,6 +85,14 @@ const RevisitStatsPage = () => {
             <p>
                 4회 이상 방문자: {revisitStats.fourPlus}명 (
                 {((revisitStats.fourPlus / revisitStats.total) * 100).toFixed(1)}%)
+            </p>
+            <p>
+                5회 이상 방문자: {revisitStats.fiveplus}명 (
+                {((revisitStats.fiveplus / revisitStats.total) * 100).toFixed(1)}%)
+            </p>
+            <p>
+                6회 이상 방문자: {revisitStats.sixplus}명 (
+                {((revisitStats.sixplus / revisitStats.total) * 100).toFixed(1)}%)
             </p>
         </div>
     );
