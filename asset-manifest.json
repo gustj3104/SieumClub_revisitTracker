@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SieumClub_revisitTracker/static/css/main.2e5dae69.css",
+    "main.js": "/SieumClub_revisitTracker/static/js/main.cd299734.js",
+    "static/js/488.23104883.chunk.js": "/SieumClub_revisitTracker/static/js/488.23104883.chunk.js",
+    "index.html": "/SieumClub_revisitTracker/index.html",
+    "main.2e5dae69.css.map": "/SieumClub_revisitTracker/static/css/main.2e5dae69.css.map",
+    "main.cd299734.js.map": "/SieumClub_revisitTracker/static/js/main.cd299734.js.map",
+    "488.23104883.chunk.js.map": "/SieumClub_revisitTracker/static/js/488.23104883.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e5dae69.css",
+    "static/js/main.cd299734.js"
+  ]
+}
