@@ -6,7 +6,7 @@ import './styles.css';
 
 const App = () => {
     return (
-        <Router>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <nav>
                 <ul className="nav-list">
                     <li>
@@ -31,7 +31,7 @@ const App = () => {
                 <Route path={process.env.PUBLIC_URL + '/add'} element={<AddSessionPage />} />
                 <Route path={process.env.PUBLIC_URL + '/stats'} element={<RevisitStatsPage />} />
             </Routes>
-        </Router>
+        </BrowserRouter>
     );
 };
 
