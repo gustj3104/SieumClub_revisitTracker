@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { addSession } from '../utils/db';
-// import '../styles.css';
 import '../addSessionStyles.css';
 
 const AddSessionPage = () => {

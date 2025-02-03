@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getSessions } from '../utils/db';
 import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
-import '../styles.css';
+import '../RevisitStyles.css';
 
 const RevisitStatsPage = () => {
     const [sessions, setSessions] = useState([]);
@@ -52,10 +52,17 @@ const RevisitStatsPage = () => {
         ],
     };
 
+    const options = {
+        responsive: true,
+        maintainAspectRatio: false, // 이 설정을 false로 하면 width 100% 적용 가능
+    };
+
     return (
         <div className="container">
             <h1>재방문 통계</h1>
-            <Bar data={data} />
+            <div className="chart-container">
+                <Bar data={data} options={options} />
+            </div>
             <p>
                 2회 이상 방문자: {revisitStats.twoPlus}명 (
                 {((revisitStats.twoPlus / revisitStats.total) * 100).toFixed(1)}%)
