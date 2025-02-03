@@ -10,7 +10,7 @@ const calculateRevisitRate = (participants) => {
 
 const SessionCard = ({ session, onDelete }) => {
     const handleDelete = async () => {
-        if (window.confirm(`${session.name}을 삭제하시겠습니까?`)) {
+        if (window.confirm(`${session.name}를 삭제하시겠습니까?`)) {
             await deleteSession(session.id);
             onDelete(session.id);
         }
