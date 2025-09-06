@@ -1,47 +1,65 @@
-.container {
-    max-width: 600px; /* 컨테이너의 최대 너비 지정 */
-    width: 100%; /* 화면 크기에 맞춰 조정 */
-    margin: 0 auto; /* 가운데 정렬 */
-    text-align: center;
+/* Add Session page tweaks (밝은 테마 고정) */
+
+/* 동일 규격 적용: 부모-자식(.add-session-page .container) + 동일요소(.add-session-page.container) 모두 케어 */
+.add-session-page .container,
+.add-session-page.container {
+    width: 92%;
+    max-width: var(--container-max, 1000px);
+    min-height: var(--container-min-h, 560px);
+    margin: 24px auto;
     padding: 20px;
-    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid var(--border, #e6eaf0);
+    border-radius: 14px;
+    box-shadow: var(--shadow, 0 8px 24px rgba(0, 0, 0, 0.08));
+    text-align: center;
+}
+
+/* 폼 */
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    display: block;
+    margin: 10px 0;
 }
 
 .text {
-    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 6px 0 8px;
 }
 .textarea {
-    display: block;
     width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 13px;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-
-.btn {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 6px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
     font-size: 14px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.2s;
+}
+.textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+    background: #fafcff;
 }
 
-.btn.cancel {
-    background-color: #dfdfdf;
-    color: black;
+.btn-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
 }
-
+.btn {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
 .btn:hover {
-    background-color: #0056b3;
+    background: #eaf0ff;
 }
-
-.btn.cancel:hover {
-    background-color: #aaa;
+.btn.cancel {
+    background: #f3f6fb;
 }

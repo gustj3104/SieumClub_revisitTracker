@@ -1,20 +1,74 @@
-.container {
-    max-width: 600px; /* 컨테이너의 최대 너비 지정 */
-    width: 100%; /* 화면 크기에 맞춰 조정 */
-    margin: 0 auto; /* 가운데 정렬 */
-    text-align: center;
+/* ===== Revisit Stats (scoped to .stats-page) ===== */
+
+/* 동일 규격 적용: 통계 컨테이너도 같은 폭/높이 */
+.stats-page .container {
+    width: 92%;
+    max-width: var(--container-max, 1000px);
+    min-height: var(--container-min-h, 560px);
+    margin: 24px auto;
     padding: 20px;
-    box-sizing: border-box;
-}
-
-.chart-container {
-    width: 100%;
-    margin-left: -10px;
-    height: 300px;
-}
-
-p {
+    background: #fff;
+    border: 1px solid var(--border, #e6eaf0);
+    border-radius: 14px;
+    box-shadow: var(--shadow, 0 8px 24px rgba(0, 0, 0, 0.08));
     text-align: center;
+}
+
+.stats-page .container h1 {
+    margin: 0 0 14px;
+    font-size: 22px;
+    color: var(--text, #1f2937);
+}
+
+/* 차트 */
+.stats-page .chart-container {
+    width: 100%;
+    height: 340px;
+    padding: 10px;
+    border: 1px solid var(--border, #e6eaf0);
+    border-radius: 12px;
+    background: #f9fbff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06) inset;
+    margin: 0 auto 12px;
+}
+.stats-page .chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* 통계 칩 */
+.stats-page .container p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 12px;
+    margin: 6px;
+    font-size: 14px;
+    color: #334155;
+    background: #f3f6fb;
+    border: 1px solid var(--border, #e6eaf0);
+    border-radius: 9999px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+.stats-page .container p b,
+.stats-page .container p strong {
     font-size: 15px;
-    margin-bottom: 15px;
+    color: #111827;
+}
+
+/* 모바일 */
+@media (max-width: 520px) {
+    .stats-page .container {
+        width: 94%;
+        padding: 16px;
+    }
+    .stats-page .chart-container {
+        height: 280px;
+        padding: 8px;
+    }
+    .stats-page .container p {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
 }
