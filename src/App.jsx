@@ -5,9 +5,11 @@ import RevisitStatsPage from './pages/RevisitStatsPage'; // 파일명에 맞게
 import GlobalActions from './components/GlobalActions'; // ← 추가
 import './styles.css';
 
+const routerBase = import.meta.env.BASE_URL.replace(/\/$/, '') || undefined;
+
 const App = () => {
     return (
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router basename={routerBase}>
             <GlobalActions /> {/* ← 이 한 줄만 추가: 모든 페이지 컨테이너 위에 항상 노출 */}
             <main className="page-wrap">
                 <Routes>
